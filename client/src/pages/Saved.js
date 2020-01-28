@@ -15,5 +15,15 @@ class Saved extends Component {
     componentDidMount() {
         this.getSavedBooks();
     }
+
+    getSavedBooks = () => {
+        API.getSavedBooks()
+        .then(res => 
+            this.setState({
+                books: res.data
+            })
+            )
+            .catch(err  => console.log(err));
+    };
     
 }

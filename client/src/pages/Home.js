@@ -9,11 +9,25 @@ import { Col, Row, Container } from "../components/Grid";
 import { List } from "../components/List";
 
 class Home extends Component {
-    state = {
-        books: [],
-        q: "",
-        message: "Look for a book!"
-    };
+  state = {
+    books: [],
+    q: "",
+    message: "Look for a book!"
+  };
 
-    
+  handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
+
+  getBooks = () => {
+    API.getBooks(this.state.q).then(res =>
+      this.setState({
+        books: res.data
+      })
+    );
+  };
+  
 }

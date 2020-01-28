@@ -27,7 +27,18 @@ class Home extends Component {
       this.setState({
         books: res.data
       })
+    )
+    .catch(() =>
+    this.setState({
+        books: [],
+        message: "No books found, search for something else"
+    })
     );
   };
-  
+
+  handleFormSubmit = event => {
+      event.preventDefault();
+      this.getBooks();
+  };
+
 }

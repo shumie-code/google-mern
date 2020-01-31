@@ -45,7 +45,7 @@ class Nav extends Component {
                 aria-expanded="false"
                 aria-label="Toggle navigation"
                 >
-                    <apn className="navbar-toggler-icon" />
+                    <span className="navbar-toggler-icon" />
                 </button>
                 <div className={`${this.state.open ? "" : "collapse "}navbar-collapse`}id="navbarNav">
                     <ul className="navbar-nav">

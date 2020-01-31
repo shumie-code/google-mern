@@ -1,4 +1,5 @@
-import React from "react";
+
+import React, { Component } from "react";
 import Jumbotron from "../components/Jumbotron";
 import Card from "../components/Card";
 import Form from "../components/Form";
@@ -65,9 +66,7 @@ class Home extends Component {
               <h1 className="text-center">
                 <strong>(MERN) Book Search</strong>
               </h1>
-              <h2>
-                {" "}
-                className="text-center"> Find and save good reads to a
+              <h2 className="text-center"> Find and save good reads to a
                 reading-list.
               </h2>
             </Jumbotron>
@@ -101,7 +100,7 @@ class Home extends Component {
                           onClick={() => this.handleBookSave(book.id)}
                           className="btn btn-primary ml-2"
                         >
-                          save
+                          Save
                         </button>
                       )}
                     />
@@ -113,6 +112,7 @@ class Home extends Component {
             </Card>
           </Col>
         </Row>
+        <Footer />
       </Container>
     );
   }

@@ -3,7 +3,7 @@ import React from "react";
 // Exporting the container, row and col components
 
 // The container component allows for bootstrap use without class names
-export function COntainer({ fluid, children }) {
+export function Container({ fluid, children }) {
   return <div className={`container${fluid ? "-fluid" : ""}`}>{children}</div>;
 }
 
@@ -17,11 +17,12 @@ export function Col({ size, children }) {
     return (
         <div 
         className={size
-        .split("")
+        .split(" ")
         .map(size => "col-" + size)
-        .join("")}
+        .join(" ")}
         >
             {children}
         </div>
     );
 }
+

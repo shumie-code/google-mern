@@ -1,18 +1,18 @@
-import react from "react";
+import React from "react";
 
 function Form({ q, handleInputChange, handleFormSubmit }) {
     return (
         <form>
         <div className="form-group">
             <label htmlFor="Query">
-                <strong>Book</strong>
+                <strong>Books</strong>
             </label>
             <input
             className="form-control"
             id="Title"
             type="text"
             value={q}
-            placeholder="Ready"
+            placeholder="Search Here"
             name="q"
             onChange={handleInputChange}
             required
@@ -22,7 +22,7 @@ function Form({ q, handleInputChange, handleFormSubmit }) {
             <button 
             onClick={handleFormSubmit}
             type="submit"
-            className="btn btn-lg btn-danger float-right"
+            className="btn btn-lg btn-success float-right"
             >
                 Search
             </button>
